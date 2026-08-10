@@ -5,9 +5,7 @@ function App() {
 
   const [inuputValue, setinputValue] = useState("");
   const [todos, settodos] = useState([]);
-
-
-
+  const [edit, setedit] = useState(null);
 
   return (
 
@@ -17,8 +15,21 @@ function App() {
       }} />
 
       <button onClick={() => {
-        settodos([...todos, inuputValue])
-        setinputValue("");
+
+        if (inuputValue.trim() === "") {
+          alert("Please Enter a Todo ! ")
+          return;
+        }
+
+        if (edit === null) {
+          settodos([...todos, inuputValue])
+          setinputValue("");
+        } else {
+          const updatedtodos = [...todos];
+          updatedtodos[edit] = inuputValue;
+          settodos(updatedtodos);
+          setinputValue("")
+        }
 
       }}>Add todo</button>
 
@@ -32,9 +43,13 @@ function App() {
               settodos(deletetodo)
             }}>delete</button>
 
-              <button onClick={() => { alert("aflkd") }}>
+              <button onClick={() => {
+                setinputValue(v)
+                setedit(i);
 
-                Edit</button></li>
+
+
+              }}>Edit</button></li>
           )
         })}
 
