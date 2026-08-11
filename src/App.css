@@ -387,3 +387,18 @@ body {
     font-size: 13px;
   }
 }
+
+.React-heading {
+  width: 140px;
+  /* background-color: rgb(116, 106, 106); */
+  background: rgba(255, 255, 255, 0.251);
+  border-radius: 20px;
+  margin-bottom: 20px;
+  padding: 2px;
+  margin-left: 100px;
+  display: flex;
+  font-width: 300;
+  justify-content: center;
+  color: rgb(221, 216, 216);
+  font-size: 8px;
+}

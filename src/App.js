@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="app-container">
       <div className="app-card">
-        {/* Header with title and count */}
+        <div className='React-heading'><h1>React-Project</h1></div>
+
         <div className="app-header">
           <h1 className="app-title">📋 My Todos</h1>
           {todos.length > 0 && (
